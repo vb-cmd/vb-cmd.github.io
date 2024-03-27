@@ -1,0 +1,36 @@
+&-cosmetic {
+    background-color: #495A4A;
+    align-items: center;
+
+    &-image {
+        max-width: 700px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-about {
+        max-width: 700px;
+
+        .content-box-header p:first-child {
+            color: #BAD2BB;
+        }
+
+        .content-box-header p:last-child {
+            color: #fff;
+        }
+
+        &-description {
+            color: #BAD2BB;
+            font-size: 20px;
+            max-width: 500px;
+
+            p {
+                padding-top: 20px;
+            }
+        }
+    }
+}

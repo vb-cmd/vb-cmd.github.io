@@ -1,0 +1,105 @@
+.header {
+    grid-area: header;
+
+    &-main {
+        display: grid;
+        grid-template-areas: 'logo menu contact-link';
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 30px;
+
+        &-logo {
+            grid-area: logo;
+            font-size: 24px;
+            font-weight: 600;
+            color: #1c1c1c;
+        }
+
+        &-menu {
+            grid-area: menu;
+            display: flex;
+            gap: 30px;
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+                    color: #1c1c1c;
+                    font-size: 16px;
+
+                    &:hover {
+                        color: #1E6DF0;
+                    }
+                }
+            }
+        }
+
+        &-menu-button,
+        &-contact-link {
+            font-size: 16px;
+        }
+
+        &-contact-link {
+            grid-area: contact-link;
+            text-decoration: none;
+        }
+
+
+        &-menu-button {
+            display: none;
+            grid-area: menu-button;
+            cursor: pointer;
+        }
+    }
+
+    &-intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &-title {
+            color: #1C1C1C;
+        }
+
+        &-subtitle {
+            background-color: #00A3FF;
+            background-image: linear-gradient(45deg, #00A3FF, #2264ED);
+            background-size: 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        &-title,
+        &-subtitle {
+            font-size: 60px;
+        }
+
+        &-text {
+            margin: 30px 0;
+            color: #999;
+            max-width: 600px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &-main {
+            justify-content: center;
+            grid-template-areas:
+            'logo'
+            'menu'
+            'contact-link';
+
+            &-menu {
+                flex-direction: column;
+            }
+
+            &-menu-button {
+                display: block;
+            }
+        }
+    }
+}

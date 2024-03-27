@@ -1,0 +1,16 @@
+&-company {
+    background-color: white;
+
+    &-about {
+        max-width: 700px;
+    }
+
+    &-description {
+        font-size: 20px;
+        max-width: 700px;
+
+        p {
+            padding-top: 20px;
+        }
+    }
+}

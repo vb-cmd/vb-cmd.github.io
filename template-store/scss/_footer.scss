@@ -1,0 +1,126 @@
+.footer {
+    color: rgb(173, 173, 173);
+    font-size: 14px;
+
+    &-hr {
+        border-top: 1px solid rgb(67, 67, 67);
+    }
+
+    &-main,
+    &-info {
+        display: grid;
+        grid-template-columns: minmax(100px, 200px) 1fr 1fr;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    &-main {
+
+        &-menu,
+        &-sm {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+        }
+
+
+        &-logo {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        &-menu {
+            justify-self: start;
+
+            &>a {
+                text-decoration: none;
+                color: rgb(128, 128, 128);
+
+                &:hover {
+                    text-decoration: underline;
+                    text-underline-offset: 5px;
+                    color: white;
+                }
+            }
+        }
+
+        &-sm {
+            justify-self: end;
+
+            &>a {
+                text-decoration: none;
+                background-color: rgb(70, 70, 70);
+                border: none;
+                border-radius: 10px;
+                font-size: 18px;
+                padding: 10px;
+                color: rgb(137, 137, 137);
+                transition: all 0.3s ease-in;
+
+                >i {
+                    margin-right: 10px;
+                }
+
+                &:hover {
+                    color: white;
+                }
+            }
+
+            &-facebook {
+                &:hover {
+                    background-color: #4267B2;
+                }
+            }
+
+            &-instagram {
+                &:hover {
+                    background-color: #833AB4;
+                }
+            }
+
+            &-telegram {
+                &:hover {
+                    background-color: #0088CC;
+                }
+            }
+        }
+    }
+
+    &-info {
+        >p:nth-child(3) {
+            justify-self: end;
+        }
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .footer {
+
+        &-main,
+        &-info {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        &-main {
+            &-menu {
+                justify-self: center;
+            }
+
+            &-sm {
+                justify-self: center;
+            }
+        }
+
+        &-info {
+            >p:nth-child(3) {
+                justify-self: center;
+            }
+        }
+    }
+}

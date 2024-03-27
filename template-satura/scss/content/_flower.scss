@@ -1,0 +1,44 @@
+&-flower {
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    color: #333333;
+    background-color: rgba(255, 255, 255);
+
+    &-background {
+        position: absolute;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        background-color: #ffffff;
+
+        img {
+            opacity: .7;
+            max-width: 100%;
+        }
+    }
+
+
+    &-description {
+        position: absolute;
+        z-index: 2;
+        max-width: 700px;
+
+        p {
+            padding-top: 20px;
+            font-size: 20px;
+        }
+
+        img {
+            max-width: 380px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &-description {    
+            img {
+                max-width: 280px;
+            }
+        }
+    }
+}

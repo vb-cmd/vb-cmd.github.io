@@ -1,0 +1,27 @@
+&-skin {
+    background-color: #F4F3E9;
+
+    &-image {
+        max-width: 700px;
+        max-height: 700px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-about {
+        max-width: 700px;
+
+        &-link {
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (max-width: 1000px) {
+        flex-direction: column-reverse;
+    }
+}

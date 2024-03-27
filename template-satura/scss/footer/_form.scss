@@ -1,0 +1,53 @@
+&-form {
+    border-bottom: 1px solid #5E5B40;
+    height: 400px;
+
+    &-labal {
+        p {
+            font-family: 'Forum', serif;
+            font-size: 62px;
+            text-transform: uppercase;
+
+            &:first-child {
+                color: #5E5B40;
+            }
+
+            &:last-child {
+                padding-left: 140px;
+                color: #333333;
+            }
+        }
+    }
+
+    &-contact {
+        display: flex;
+        flex-direction: column;
+
+        input,
+        button {
+            font-size: 18px;
+        }
+
+        input {
+
+            &[type=text],
+            &[type=tel] {
+                color: #5E5B40;
+                border: none;
+                border-bottom: 1px solid #5E5B40;
+                background-color: transparent;
+                padding: 10px;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                width: 300px;
+            }
+        }
+
+        button {
+            &[type=submit] {
+                cursor: pointer;
+                width: 200px;
+            }
+        }
+    }
+}

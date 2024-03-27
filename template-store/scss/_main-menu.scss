@@ -1,0 +1,17 @@
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+
+    &>a {
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+    }
+}

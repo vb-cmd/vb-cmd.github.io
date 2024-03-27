@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #0f0d0e;
+    font-family: 'Outfit', sans-serif;
+    color: rgb(249, 244, 218);
+}
+
+a {
+    color: rgb(249, 244, 218);
+
+    &:hover {
+        color: rgb(252, 186, 40)
+    }
+}

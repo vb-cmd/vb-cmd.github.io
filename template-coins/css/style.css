@@ -1,0 +1,286 @@
+@import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Protest+Strike&display=swap);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: #0f0d0e;
+  font-family: "Outfit", sans-serif;
+  color: rgb(249, 244, 218);
+}
+
+a {
+  color: rgb(249, 244, 218);
+}
+a:hover {
+  color: rgb(252, 186, 40);
+}
+
+.btn {
+  background-color: rgb(252, 186, 40);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 17px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(165, 124, 0);
+}
+
+.menu-horizontal {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 40px;
+  background-color: rgba(252, 186, 40, 0.4);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  z-index: 999;
+}
+.menu-horizontal-link {
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+.menu-horizontal-link:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(252, 186, 40);
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  background-color: #0f0d0e;
+  height: 500px;
+}
+#header > .logo {
+  font-size: 45px;
+  font-weight: bolder;
+  font-family: "Protest Strike", sans-serif;
+  text-transform: uppercase;
+  color: #fcba28;
+  text-shadow: 1px 1px 1px #000, -3px 3px 0px #ed203d, -5px 5px 0px #13ab93;
+}
+#header > .intro {
+  font-size: 20px;
+}
+#header > .search {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  height: 40px;
+  width: 100%;
+}
+#header > .search > .search-submit {
+  max-width: 120px;
+  min-width: 60px;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background-color: rgb(252, 186, 40);
+  color: #0f0d0e;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#header > .search > .search-submit:hover {
+  background-color: rgb(165, 124, 0);
+}
+#header > .search > .search-input {
+  padding-left: 10px;
+  max-width: 300px;
+  min-width: 50px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  background-color: rgb(35, 31, 32);
+  color: rgb(249, 244, 218);
+}
+#header > .search > .search-input::-moz-placeholder {
+  color: rgb(160, 149, 109);
+  font-weight: 400;
+}
+#header > .search > .search-input::placeholder {
+  color: rgb(160, 149, 109);
+  font-weight: 400;
+}
+
+@media screen and (max-width: 540px) {
+  #header > .logo {
+    font-size: 30px;
+  }
+  #header > .search > .search-submit {
+    max-width: 80px;
+  }
+  #header > .intro {
+    font-size: 15px;
+  }
+}
+#content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1400px;
+  width: 100%;
+  padding: 10px;
+  padding-top: 50px;
+}
+
+.card {
+  display: block;
+  position: relative;
+  background-color: rgb(35, 31, 32);
+  border-radius: 20px;
+  max-width: 350px;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.card-image {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  grid-area: Image;
+  border-radius: 50%;
+  max-width: 200px;
+  width: 100%;
+  opacity: 0.4;
+}
+.card-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-areas: "title" "text" "button";
+  align-content: space-between;
+  gap: 10px;
+  padding: 10px;
+}
+.card-body-text, .card-body-title {
+  text-shadow: 0 0 4px black;
+}
+.card-body-title {
+  text-transform: capitalize;
+  text-shadow: 0 0 4px black;
+  font-size: 20px;
+  grid-area: title;
+}
+.card-body-text {
+  grid-area: text;
+  font-size: 15px;
+  overflow-x: auto;
+}
+.card-body-button {
+  grid-area: button;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+}
+#footer > .logo {
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: "Protest Strike", sans-serif;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.2);
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+#footer > .logo:hover {
+  color: rgb(250, 250, 250);
+}
+#footer > .social {
+  display: flex;
+  gap: 20px;
+  font-size: 15px;
+}
+#footer > .copyright {
+  font-size: 15px;
+}
+
+.model {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.model-content {
+  --size-max: 800px;
+  --size-min: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: var(--size-max);
+  max-height: var(--size-max);
+  min-height: var(--size-min);
+  min-width: var(--size-min);
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+  padding: 20px;
+  background-color: rgb(59, 59, 59);
+  border-radius: 20px;
+}
+.model-content-title {
+  border: none;
+  background-color: rgb(51, 51, 51);
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.model-content-body {
+  width: 100%;
+  height: 100%;
+}
+.model-content-close {
+  transition: all 0.3s ease;
+}
+.model-content-close:hover {
+  background-color: rgb(124, 0, 0);
+  color: rgb(251, 251, 251);
+}

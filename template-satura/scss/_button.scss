@@ -1,0 +1,19 @@
+.button {
+    position: relative;
+    text-transform: uppercase;
+    border: 1px solid #5E5B40;
+    color: #5E5B40;
+    font-size: 18px;
+    padding: 10px 30px;
+    background-color: transparent;
+
+    &::after {
+        position: absolute;
+        content: "";
+        background-image: url("../img/arrow.svg");
+        top: calc(50% - 6px);
+        right: 5px;
+        width: 15px;
+        height: 12px;
+    }
+}

@@ -1,0 +1,67 @@
+.model {
+    position: fixed;
+    top: 0;
+    width: 400px;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(67, 67, 67);
+
+    &-position-left {
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    &-position-right {
+        right: 0;
+        transform: translateX(100%);
+    }
+
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(37, 37, 37, .8);
+        backdrop-filter: blur(5px);
+        padding: 5px 10px;
+
+        &-text {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 0 5px black;
+        }
+
+        &-exit {
+            cursor: pointer;
+            background-color: black;
+            font-size: 20px;
+            color: rgb(211, 211, 211);
+            border: 1px solid rgb(67, 67, 67);
+            border-radius: 5px;
+            padding: 4px 5px 2px 5px;
+            transition: all 0.3s ease-in;
+
+            &:hover {
+                color: white;
+                border: 1px solid rgb(178, 0, 0);
+                background-color: rgb(108, 0, 0);
+            }
+        }
+    }
+
+    &-body {
+        overflow-y: auto;
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+        background-color: rgb(21, 21, 21);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .model {
+        width: 100%;
+    }
+}

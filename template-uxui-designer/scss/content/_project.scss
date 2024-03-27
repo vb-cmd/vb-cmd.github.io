@@ -1,0 +1,52 @@
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #F4F4F4;
+    border-radius: 10px;
+
+    &-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px 10px 0 0;
+        background-color: #b9e5ff;
+        color: #1E6DF0;
+        height: 200px;
+    }
+
+    &-body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        text-align: left;
+
+        &-title {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        &-text {
+            color: #999;
+        }
+
+        &-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 14px;
+
+            span {
+                background-color: #F4FAFF;
+                padding: 7px;
+                font-weight: 700;
+                border-radius: 5px;
+            }
+        }
+
+        &-link {
+            text-decoration: none;
+        }
+    }
+}

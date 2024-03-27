@@ -1,0 +1,105 @@
+.content-search {
+    display: grid;
+    grid-template-areas: 'categories cards cards cards cards sort';
+    gap: 10px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &-cards {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 10px;
+        grid-area: cards;
+    }
+    
+    &-categories {
+        width: 200px;
+        grid-area: categories;
+    }
+
+    &-sort {
+        width: 150px;
+        grid-area: sort;
+    }
+
+    &-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        top: 20px;
+        position: sticky;
+
+        &-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            >li {
+                font-size: 14px;
+                padding: 5px 0;
+
+                >a {
+                    text-decoration: none;
+                    color: white;
+
+                    &:hover {
+                        text-decoration: underline;
+                        text-underline-offset: 5px;
+                    }
+                }
+            }
+        }
+
+        &-title {
+            color: rgb(160, 160, 160);
+            font-size: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and (max-width: 1240px) {
+    .content-search {
+        grid-template-areas:
+            'categories cards cards cards sort';
+
+        &-cards {
+            grid-template-columns: repeat(3,1fr);
+        }
+        
+        &-sort, &-categories {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    .content-search {
+        grid-template-areas:
+            'categories sort'
+            'cards cards';
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .content-search {
+        &-cards {
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .content-search {
+        grid-template-areas:
+            'categories'
+            'sort'
+            'cards';
+
+        &-cards {
+            grid-template-columns: auto;
+        }
+    }
+}

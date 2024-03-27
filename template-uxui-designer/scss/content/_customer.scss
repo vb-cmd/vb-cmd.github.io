@@ -1,0 +1,58 @@
+.customer-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #F4F4F4;
+    border-radius: 5px;
+    padding: 10px 20px;
+
+    &-stars {
+        display: flex;
+        gap: 5px;
+
+        >.active {
+            color: #1E6DF0;
+        }
+
+        >.inactive {
+            color: #E2F2FF;
+        }
+    }
+
+    &-text {
+        text-align: left;
+        color: #999;
+    }
+
+    &-about {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        &-image {
+            background-color: #e6f6ff;
+            border-radius: 50%;
+            padding: 10px;
+
+            i {
+                color: #2264ED;
+            }
+        }
+
+        &-name {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 5px;
+
+            b,
+            span {
+                font-size: 15px;
+            }
+
+            b {
+                font-weight: 600;
+            }
+        }
+    }
+}

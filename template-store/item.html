@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-logo">Logo</div>
+
+        <nav class="header-menu">
+            <a href="./index.html">Home</a>
+            <a href="./search.html">All</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="header-search">
+            <form action="#" method="get">
+                <input type="search" name="query" placeholder="Search">
+            </form>
+        </div>
+
+        <div class="header-menu-button">
+            <button class="header-btn"><i class='bx bx-menu-alt-left'></i></button>
+        </div>
+
+        <div class="header-cart-button">
+            <button class="header-btn"><i class='bx bx-cart-add'></i></button>
+        </div>
+    </header>
+
+    <main class="content-item">
+        <section class="content-item-images">
+            <img src="./img/image-add.svg" alt="item" class="content-item-images-main">
+
+            <div class="content-item-images-thumbnails">
+                <div class="content-item-images-thumbnails-item">
+                    <img src="./img/image-add.svg" alt="item">
+                </div>
+                <div class="content-item-images-thumbnails-item">
+                    <img src="./img/image-add.svg" alt="item">
+                </div>
+                <div class="content-item-images-thumbnails-item">
+                    <img src="./img/image-add.svg" alt="item">
+                </div>
+                <div class="content-item-images-thumbnails-item">
+                    <img src="./img/image-add.svg" alt="item">
+                </div>
+            </div>
+        </section>
+
+        <section class="content-item-body">
+            <form action="#" method="get" class="order">
+                <h1 class="order-title">Item title</h1>
+
+                <div class="order-price">$20.00 USD</div>
+
+                <fieldset class="order-tags">
+                    <legend>Tags:</legend>
+                    <input type="radio" name="tag" value="tag" id="tag" checked>
+                    <label for="tag">Tag</label>
+                    <input type="radio" name="tag" value="tag1" id="tag1">
+                    <label for="tag1">Tag1</label>
+                    <input type="radio" disabled name="tag" value="tag2" id="tag2">
+                    <label for="tag2">Tag2</label>
+                </fieldset>
+
+                <fieldset class="order-tags">
+                    <legend>Tags 2:</legend>
+                    <input type="radio" name="tag2" value="tag" id="tag3" checked>
+                    <label for="tag3">Tag</label>
+                    <input type="radio" name="tag2" value="tag1" id="tag4">
+                    <label for="tag4">Tag1</label>
+                    <input type="radio" name="tag2" value="tag2" id="tag5">
+                    <label for="tag5">Tag1</label>
+                    <input type="radio" name="tag2" value="tag3" id="tag6">
+                    <label for="tag6">Tag1</label>
+                    <input type="radio" name="tag2" value="tag4" id="tag7">
+                    <label for="tag7">Tag1</label>
+                    <input type="radio" name="tag2" value="tag5" id="tag8">
+                    <label for="tag8">Tag1</label>
+                    <input type="radio" name="tag2" value="tag6" id="tag9">
+                    <label for="tag9">Tag1</label>
+                    <input type="radio" disabled name="tag2" value="tag7" id="tag10">
+                    <label for="tag10">Tag2</label>
+                </fieldset>
+
+                <div class="order-description">
+                    <p>Text text text text text text text text text text text text text text text text.</p>
+                    <p>Text text text text text text text text text text text text text text text text.</p>
+                </div>
+
+                <button type="submit" class="order-submit">Add to cart</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-hr"></div>
+
+        <div class="footer-main">
+            <div class="footer-main-logo">Logo</div>
+
+            <nav class="footer-main-menu">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+
+            <nav class="footer-main-sm">
+                <a href="#" class="footer-main-sm-facebook"><i class='bx bxl-facebook'></i>Facebook</a>
+                <a href="#" class="footer-main-sm-instagram"><i class='bx bxl-instagram'></i>Instagram</a>
+                <a href="#" class="footer-main-sm-telegram"><i class='bx bxl-telegram'></i>Telegram</a>
+            </nav>
+        </div>
+
+        <div class="footer-hr"></div>
+
+        <div class="footer-info">
+            <p>© 2024. Everything is alright.</p>
+            <p>Created by Vitalii B.</p>
+            <p>Made with love.</p>
+        </div>
+    </footer>
+
+    <div id="model-right" class="model model-position-right">
+        <div class="model-title">
+            <div class="model-title-text">Cart</div>
+            <button class="model-title-exit"><i class='bx bx-x'></i></button>
+        </div>
+        <div class="model-body">
+            <div class="cart cart-empty">
+                <i class='bx bx-cart bx-lg'></i>
+                <p>Cart is empty</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="model-left" class="model model-position-left">
+        <div class="model-title">
+            <div class="model-title-text">Menu</div>
+            <button class="model-title-exit"><i class='bx bx-x'></i></button>
+        </div>
+        <div class="model-body">
+            <nav class="main-menu">
+                <a href="./index.html">Home</a>
+                <a href="./search.html">All</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <script type="module">
+        import Model from './js/model.js'
+
+        window.onload = () => {
+            const cart = new Model('#model-right', '.header-cart-button > button')
+            const menu = new Model('#model-left', '.header-menu-button > button')
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.content {
+    grid-area: content;
+}
+
+@import 'content/career';
+@import 'content/contact';
+@import 'content/customer';
+@import 'content/price';
+@import 'content/project';

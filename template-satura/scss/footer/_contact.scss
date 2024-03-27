@@ -1,0 +1,42 @@
+&-contact {
+    min-height: 400px;
+
+    &-from {
+        max-width: 500px;
+
+        a {
+            font-size: 18px;
+            color: #495A4A;
+        }
+
+        p {
+            color: #495A4A;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    }
+
+    &-social {
+        max-width: 500px;
+
+        a {
+            display: flex;
+            flex-direction: row;
+            padding: 10px;
+            font-size: 18px;
+            color: #495A4A;
+        }
+
+        p {
+            color: #495A4A;
+            margin-top: 100px;
+        }
+
+        &-instagram {
+            background-image: url(../img/footer/instagram.svg);
+            height: 24px;
+            width: 24px;
+            margin-right: 20px;
+        }
+    }
+}
