@@ -1,0 +1,72 @@
+@media screen and (max-width: 800px) {
+    .container {
+        &-body {
+            &-intro {
+                img {
+                    width: 100%;
+                }
+            }
+
+            &-main {
+                img:first-child {
+                    display: none;
+                }
+
+                img:last-child {
+                    display: block;
+                }
+            }
+
+            &-right,
+            &-left {
+                flex-direction: column;
+                margin-bottom: 20px;
+            }
+        }
+
+        &-header {
+            grid-template-columns: 1fr;
+
+
+            &-logo {
+                &-text {
+                    grid-column: 1;
+                }
+            }
+
+            &-intro {
+
+                &-image,
+                &-left,
+                &-right {
+                    grid-column: 1;
+                }
+
+                &-icon {
+                    flex-direction: column;
+                }
+
+                &-image {
+                    img:first-child {
+                        display: none;
+                    }
+
+                    img:last-child {
+                        display: block;
+                    }
+                }
+            }
+
+        }
+
+        &-footer {
+
+            &-body,
+            &-title {
+                display: none;
+            }
+
+            background-size: cover;
+        }
+    }
+}

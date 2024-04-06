@@ -1,0 +1,46 @@
+&-body {
+    padding: 40px;
+
+    &-main {
+        img {
+            width: 100%;
+        }
+
+        img:first-child {
+            display: block;
+        }
+
+        img:last-child {
+            display: none;
+        }
+    }
+
+    &-intro {
+        img {
+            width: 500px;
+        }
+
+    }
+
+    &-text {
+        h3 {
+            font-size: 62px;
+            color: #e27601;
+        }
+
+        p {
+            font-size: 32px;
+        }
+    }
+
+    &-right,
+    &-left {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &-right {
+        flex-direction: row-reverse;
+    }
+}

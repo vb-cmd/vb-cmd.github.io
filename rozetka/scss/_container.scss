@@ -1,0 +1,11 @@
+$color-bg: #333087;
+$color-text: white;
+
+.container {
+    font-family: 'Russo One', sans-serif;
+    background-color: white;
+
+    @import 'container/header';
+    @import 'container/body';
+    @import 'container/footer';
+}
