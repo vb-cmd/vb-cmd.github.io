@@ -1,0 +1,11 @@
+.survey-form {
+    
+}
+
+.survey-form input[type="radio"] {
+    display: none;
+}
+
+.survey-form label {
+    display: block;
+}
