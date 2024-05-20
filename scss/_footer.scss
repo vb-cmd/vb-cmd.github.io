@@ -1,6 +1,9 @@
 .footer {
     grid-area: footer;
+    padding: 10px;
+
     &-title {
-       color: gray;
+        color: gray;
+        font-size: 15px;
     }
 }

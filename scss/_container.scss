@@ -1,13 +1,10 @@
 .container {
     display: grid;
     grid-template-areas:
-        'header header header'
-        'content content content'
-        'footer footer footer';
+        'header'
+        'content'
+        'footer';
     justify-content: center;
     justify-items: center;
-    max-width: 1200px;
-    width: 100%;
     gap: 40px;
-    margin: 0 auto;
 }

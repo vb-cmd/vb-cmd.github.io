@@ -1,0 +1,35 @@
+@media screen and (max-width: 800px) {
+    .header {
+        &-title {
+            font-size: 20px;
+        }
+    }
+
+    .card {
+        width: 500px;
+        height: 400px;
+
+        &:hover {
+            transform: none;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        width: 350px;
+        height: 100px;
+
+        &:hover {
+            transform: none;
+
+            .card-title {
+                display: block;
+            }
+
+            .card-blur {
+                backdrop-filter: blur(20px);
+            }
+        }
+    }
+}

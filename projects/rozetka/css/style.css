@@ -11,7 +11,7 @@
 }
 .container-header {
   background-color: #333087;
-  background-image: url("../../img/stars.png");
+  background-image: url("./../img/stars.png");
   background-position: left top;
   background-repeat: repeat-x;
   background-size: 1000px;
@@ -110,7 +110,7 @@
 }
 .container-footer {
   background-color: #333087;
-  background-image: url("../../img/stars-with-clouds.png");
+  background-image: url("./../img/stars-with-clouds.png");
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: contain;

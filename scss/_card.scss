@@ -1,0 +1,61 @@
+.card {
+    position: relative;
+    overflow: hidden;
+    width: 1000px;
+    height: 600px;
+    border-radius: 20px;
+    border: 1px solid rgb(58, 58, 58);
+    transition: all .2s ease-in;
+
+    &:hover {
+        border: 1px solid rgb(3, 204, 0);
+        box-shadow: 0 0 30px rgba(3, 204, 0, .5);
+
+        .card-blur {
+            backdrop-filter: none;
+        }
+
+        .card-title {
+            display: none;
+        }
+
+        transform: perspective(1500px) rotateX(5deg) rotateY(5deg);
+    }
+
+    &-image,
+    &-title,
+    &-blur {
+        position: absolute;
+        transition: inherit;
+    }
+
+    &-image,
+    &-blur {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &-blur {
+        z-index: 1;
+        backdrop-filter: blur(5px);
+    }
+
+    &-image {
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-title {
+        z-index: 2;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: rgb(64, 255, 0);
+        text-shadow: 0 1px 2px black;
+        font-weight: bold;
+        top: 30px;
+        left: 30px;
+    }
+}
